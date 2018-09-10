@@ -11,7 +11,7 @@
 ---
 
 
-## 校对 ✅
+## 更新 中
 
 <!-- doc-templite START generated -->
 <!-- repo = 'sharkdp/bat' -->
@@ -25,6 +25,8 @@
 [commit]: https://github.com/sharkdp/bat/tree/84734eac9d19f90f942e587e7ec7d3aad4cda2c2
 
 <!-- doc-templite END generated -->
+
+- [ ] [assets/readme.md](assets/readme.md)
 
 ### 贡献
 
