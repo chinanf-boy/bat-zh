@@ -3,7 +3,7 @@
 [translate-svg]: http://llever.com/translate.svg
 [translate-list]: https://github.com/chinanf-boy/chinese-translate-list
 
-「 一个`cat(1)`克隆与语法高亮和Git集成。 」
+「 一个`cat(1)`克隆，搭配语法高亮和Git集成。 」
 
 [中文](./readme.md) | [english](https://github.com/sharkdp/bat)
 
@@ -11,7 +11,7 @@
 ---
 
 
-## 更新 中
+## 更新 ✅
 
 <!-- doc-templite START generated -->
 <!-- repo = 'sharkdp/bat' -->
@@ -26,7 +26,7 @@
 
 <!-- doc-templite END generated -->
 
-- [ ] [assets/readme.md](assets/readme.md)
+- [bat 中的语法高亮显示说明](assets/readme.md)
 
 ### 贡献
 
@@ -52,21 +52,21 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-  - [语法突出显示](#%E8%AF%AD%E6%B3%95%E7%AA%81%E5%87%BA%E6%98%BE%E7%A4%BA)
+  - [语法高亮显示](#%E8%AF%AD%E6%B3%95%E9%AB%98%E4%BA%AE%E6%98%BE%E7%A4%BA)
   - [Git集成](#git%E9%9B%86%E6%88%90)
   - [自动分页](#%E8%87%AA%E5%8A%A8%E5%88%86%E9%A1%B5)
-  - [文件连接](#%E6%96%87%E4%BB%B6%E8%BF%9E%E6%8E%A5)
+  - [文件串联](#%E6%96%87%E4%BB%B6%E4%B8%B2%E8%81%94)
 - [如何使用](#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8)
 - [安装](#%E5%AE%89%E8%A3%85)
-  - [在Ubuntu上](#%E5%9C%A8ubuntu%E4%B8%8A)
-  - [在Arch Linux上](#%E5%9C%A8arch-linux%E4%B8%8A)
-  - [在Void Linux上](#%E5%9C%A8void-linux%E4%B8%8A)
-  - [在FreeBSD上](#%E5%9C%A8freebsd%E4%B8%8A)
-  - [在macOS上](#%E5%9C%A8macos%E4%B8%8A)
+  - [Ubuntu](#ubuntu)
+  - [Arch Linux](#arch-linux)
+  - [Void Linux](#void-linux)
+  - [FreeBSD](#freebsd)
+  - [macOS](#macos)
   - [二进制文件](#%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6)
   - [源项目](#%E6%BA%90%E9%A1%B9%E7%9B%AE)
 - [定制](#%E5%AE%9A%E5%88%B6)
-  - [突出主题](#%E7%AA%81%E5%87%BA%E4%B8%BB%E9%A2%98)
+  - [高亮主题](#%E9%AB%98%E4%BA%AE%E4%B8%BB%E9%A2%98)
   - [输出风格](#%E8%BE%93%E5%87%BA%E9%A3%8E%E6%A0%BC)
   - [添加新语法/语言定义](#%E6%B7%BB%E5%8A%A0%E6%96%B0%E8%AF%AD%E6%B3%95%E8%AF%AD%E8%A8%80%E5%AE%9A%E4%B9%89)
   - [添加新主题](#%E6%B7%BB%E5%8A%A0%E6%96%B0%E4%B8%BB%E9%A2%98)
@@ -78,9 +78,9 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-### 语法突出显示
+### 语法高亮显示
 
-`bat`支持大量编程和mark**语言的语法突出显示: 
+`bat`支持大量编程和`mark**`语言的语法高亮显示: 
 
 ![Syntax highlighting example](https://imgur.com/rGsdnDe.png)
 
@@ -92,11 +92,11 @@
 
 ### 自动分页
 
-如果输出对于一个屏幕来说太大,`bat`可以控制自己的输出`less`管道,. 
+如果输出对于一个屏幕来说太大,`bat`可以`less`控制自己的输出管道,. 
 
-### 文件连接
+### 文件串联
 
-哦..你也可以用它来连接文件: wink:. 每当`bat`检测到非交互式终端,它将回退到打印普通文件内容. 
+哦..你也可以用它来串联文件 :wink: . 每当`bat`检测到非交互式终端,它将回退到打印普通文件内容. 
 
 ## 如何使用
 
@@ -112,7 +112,7 @@
 > bat src/*.rs
 ```
 
-从stdin读取,明确指定语言
+从stdin读取,指定明确语言
 
 ```bash
 > yaml2json .travis.yml | json_pp | bat -l json
@@ -125,28 +125,28 @@
 作为`cat`的替代品: 
 
 ```bash
-bat > note.md  # quickly create a new file
+bat > note.md  # 快速 创建一个新文件
 
 bat header.md content.md footer.md > document.md
 
-bat -n main.rs  # show line numbers (only)
+bat -n main.rs  # 展示行数 (only)
 
-bat f - g  # output 'f', then stdin, then 'g'.
+bat f - g  # 先输出 'f', 之后是 stdin, 之后是 'g'.
 ```
 
 ## 安装
 
-### 在Ubuntu上
+### Ubuntu
 
 *一些和其他基于Debian的Linux发行版.*
 
-从[发布页面](https://github.com/sharkdp/bat/releases),下载最新的`.deb`包裹,并通过以下方式安装: 
+从[releases页面](https://github.com/sharkdp/bat/releases),下载最新的`.deb`包裹,并通过以下方式安装: 
 
 ```bash
 sudo dpkg -i bat_0.6.0_amd64.deb  # adapt version number and architecture
 ```
 
-### 在Arch Linux上
+### Arch Linux
 
 你可以安装[该`bat`包](https://www.archlinux.org/packages/community/x86_64/bat/),官方来源: 
 
@@ -154,15 +154,15 @@ sudo dpkg -i bat_0.6.0_amd64.deb  # adapt version number and architecture
 pacman -S bat
 ```
 
-### 在Void Linux上
+### Void Linux
 
-你可以安装`bat`通过xbps-install: 
+你可以通过xbps-install安装`bat`: 
 
     xbps-install -S bat
 
-### 在FreeBSD上
+### FreeBSD
 
-您可以安装预编译的[`bat`包](https://www.freshports.org/textproc/bat)用pkg: 
+您可以用pkg安装预编译的[`bat`包](https://www.freshports.org/textproc/bat): 
 
 ```bash
 pkg install bat
@@ -175,7 +175,7 @@ cd /usr/ports/textproc/bat
 make install
 ```
 
-### 在macOS上
+### macOS
 
 你可以安装`bat`,通过[brew](http://braumeister.org/formula/bat): 
 
@@ -185,11 +185,11 @@ brew install bat
 
 ### 二进制文件
 
-看[发布页面](https://github.com/sharkdp/bat/releases),其中预建版本的`bat`,有许多不同的架构. 
+看[releases页面](https://github.com/sharkdp/bat/releases),其中预建版本的`bat`,有许多不同的架构, 要看清楚啦. 
 
 ### 源项目
 
-如果你想建立`bat`的源代码,您需要Rust 1.26或更高版本. 然后你可以使用`cargo`建立一切: 
+如果你想建立`bat`的源代码,您需要`Rust 1.26或更高版本`. 然后你可以使用`cargo`建立一切: 
 
 ```bash
 cargo install bat
@@ -199,13 +199,13 @@ cargo install bat
 
 ## 定制
 
-### 突出主题
+### 高亮主题
 
-使用`bat --list-themes`获取语​​法突出显示的所有可用主题的列表. 选择`TwoDark`主题,运行`bat`带`--theme=TwoDark`选项或设置`BAT_THEME`环境变量为`TwoDark`. 在你的shell启动文件中使用`export BAT_THEME="TwoDark"`,使更改永久化. 
+使用`bat --list-themes`获取语​​法高亮显示的所有可用主题的列表. 选择`TwoDark`主题,运行`bat`带`--theme=TwoDark`选项，或设置`BAT_THEME`环境变量为`TwoDark`. 在你的shell启动文件中使用`export BAT_THEME="TwoDark"`,使更改永久化. 
 
 ### 输出风格
 
-你可以使用`--style`这个外观的选项,控制`bat`输出. 您可以使用`--style=numbers,changes`例如,仅显示 Git更改和行号 ,但没有网格和文件头. 
+你可以使用`--style`这个外观的选项,控制`bat`输出. 您可以使用`--style=numbers,changes`例如,仅显示Git更改和行号 ,但没有网格和文件头. 
 
 ### 添加新语法/语言定义
 
@@ -219,8 +219,8 @@ BAT_CONFIG_DIR="$(bat cache --config-dir)"
 mkdir -p "$BAT_CONFIG_DIR/syntaxes"
 cd "$BAT_CONFIG_DIR/syntaxes"
 
-# Put new '.sublime-syntax' 语言定义文件
-# in this folder (or 它的 子目录), for example:
+# 把 '.sublime-syntax' 语言定义文件 放到
+# 这个syntaxes目录 (or 它的 子目录), 例如:
 git clone https://github.com/tellnobody1/sublime-purescript-syntax
 ```
 
@@ -242,7 +242,7 @@ bat cache --clear
 
 这与我们添加新语法定义的方式非常相似. 
 
-首先,使用新语法突出显示主题创建一个文件夹: 
+首先,使用新语法高亮显示主题创建一个文件夹: 
 
 ```bash
 BAT_CONFIG_DIR="$(bat cache --config-dir)"
@@ -253,7 +253,7 @@ cd "$BAT_CONFIG_DIR/themes"
 # 下载一个主题是 '.tmTheme' 格式, for example:
 git clone https://github.com/greggb/sublime-snazzy
 
-# Update the binary cache
+# 更新缓存
 bat cache --init
 ```
 
@@ -261,7 +261,7 @@ bat cache --init
 
 ### 使用不同的页面方式
 
-`bat`使用在`PAGER`环境变量中,指定的页面方式. 如果未设置此变量,`less`就是默认使用. 如果要使用其他页面方式,可以修改`PAGER`变量或设置`BAT_PAGER`环境变量,以覆盖在中指定的内容`PAGER`. 如果要将命令行参数传递给页面方式,则需要创建一个 小的shell脚本 作为包装器,例如: 
+`bat`使用在`PAGER`环境变量中,指定的页面方式. 如果未设置此变量,`less`就是默认使用的. 如果要使用其他页面方式,可以修改`PAGER`变量或设置`BAT_PAGER`环境变量,以覆盖在`PAGER`中指定的内容. 如果要将命令行参数传递给页面方式,则需要创建一个 小的shell脚本 作为包装器,例如: 
 
 ```bash
 #!/bin/bash
@@ -273,7 +273,7 @@ less --tabs 4 -RF "$@"
 
 ### 终端和颜色
 
-`bat`控制终端*有*和*无*真彩色支持. 但是,语法高亮主题中的颜色未针对8位颜色进行优化,因此强烈建议您使用具有24位真彩色支持的终端 (`terminator`,`konsole`,`iTerm2`,...) . 看到[本文](https://gist.github.com/XVilka/8346728)了解更多详情和完整的支持truecolor的终端列表. 
+`bat`控制终端*有*还是*没有*真彩色支持. 但是,语法高亮主题中的颜色未针对8位颜色进行优化,因此强烈建议您使用具有24位真彩色支持的终端 (`terminator`,`konsole`,`iTerm2`,...) . 看看[本文](https://gist.github.com/XVilka/8346728)了解更多详情和完整的支持truecolor的终端列表. 
 
 确保你的truecolor终端,设置了`COLORTERM`变量到`truecolor`或者`24bit`. 除此以外,`bat`将无法确定是否支持24位转义序列 (并回退到8位颜色) . 
 
